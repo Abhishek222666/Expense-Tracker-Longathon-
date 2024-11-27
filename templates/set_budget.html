@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-center">Set Monthly Budget</h2>
+<div class="d-flex justify-content-center">
+    <form method="POST" action="{{ url_for('set_budget') }}" class="p-4 border rounded" style="width: 50%; background-color: #f8f9fa;">
+        <div class="form-group">
+            <label for="budget">Monthly Budget (₹)</label>
+            <input type="number" class="form-control" id="budget" name="budget" step="0.01" placeholder="Enter monthly budget" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Set Budget</button>
+    </form>
+</div>
+{% endblock %}
